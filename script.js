@@ -8,6 +8,19 @@
             { name: 'MySQL', category: 'Tools' },
             { name: 'Neural Networks', category: 'Interests' },
             { name: 'APIs', category: 'Interests' },
+            { name: 'FastAPI', category: 'Frameworks' },
+            { name: 'AWS', category: 'Tools' },
+            { name: 'Git, Github, Bitbucket', category: 'Tools' },
+            { name: 'System Design', category: 'Interests' },
+            { name: 'MongoDB', category: 'Tools' },
+            { name: 'RabbitMQ', category: 'Tools' },
+            { name: 'TensorFlow', category: 'Libraries' },
+            { name: 'PyTorch', category: 'Libraries' },
+            { name: 'Numpy', category: 'Libraries' },
+            { name: 'Pandas', category: 'Libraries' },
+            { name: 'JavaScript', category: 'Core Languages' },
+            
+            
         ];
 
         const skillsContainer = document.getElementById('skills-container');
