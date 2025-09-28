@@ -113,7 +113,7 @@ button:hover ~ #cursor-tracker .cursor-outline,
 /* Project image styles */
 .project-image {
     transition: all 0.3s ease;
-    filter: brightness(0.7) contrast(1.1);
+    /* filter: brightness(0.7) contrast(1.1); */
 }
 .flip-card:hover .project-image {
     filter: brightness(1) contrast(1);
