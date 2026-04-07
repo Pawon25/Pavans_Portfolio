@@ -131,3 +131,11 @@ button:hover ~ #cursor-tracker .cursor-outline,
         gap: 0.75rem;
     }
 }
+
+/* Credly iframe border fix */
+.credly-badge-wrapper iframe {
+    border: none !important;
+    margin: -12px -12px -4px -12px !important;
+    width: calc(100% + 24px) !important;
+    height: calc(100% + 16px) !important;
+}

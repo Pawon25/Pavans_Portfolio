@@ -1,26 +1,26 @@
         const skills = [
             { name: 'Java', category: 'Core Languages' },
             { name: 'Python', category: 'Core Languages' },
-            { name: 'C', category: 'Core Languages' },
             { name: 'React.js', category: 'Libraries' },
-            { name: 'Scikit-learn', category: 'Libraries' },
-            { name: 'Firebase', category: 'Tools' },
+            { name: 'Spring Boot', category: 'Frameworks' },
             { name: 'MySQL', category: 'Tools' },
             { name: 'Neural Networks', category: 'Interests' },
-            { name: 'APIs', category: 'Interests' },
+            { name: 'LangChain', category: 'Libraries' },
             { name: 'FastAPI', category: 'Frameworks' },
+            { name: 'Apache Kafka', category: 'Tools' },
             { name: 'AWS', category: 'Tools' },
-            { name: 'Git, Github, Bitbucket', category: 'Tools' },
-            { name: 'System Design', category: 'Interests' },
+            { name: 'SageMaker', category: 'Tools' },
+            { name: 'Bedrock', category: 'Tools' },
+            { name: 'OpenSearch', category: 'Tools' },
+            { name: 'System Design and Architecture', category: 'Interests' },
             { name: 'MongoDB', category: 'Tools' },
             { name: 'RabbitMQ', category: 'Tools' },
             { name: 'TensorFlow', category: 'Libraries' },
-            { name: 'PyTorch', category: 'Libraries' },
-            { name: 'Numpy', category: 'Libraries' },
-            { name: 'Pandas', category: 'Libraries' },
+            { name: 'llama.cpp', category: 'Libraries' },
             { name: 'JavaScript', category: 'Core Languages' },
-            
-            
+            { name: 'Scikit-learn', category: 'Libraries' },
+            { name: 'AI deployments and monitoring', category: 'Interests' },
+            { name: 'Model Training and Fine-tuning', category: 'Tools' },
         ];
 
         const skillsContainer = document.getElementById('skills-container');
