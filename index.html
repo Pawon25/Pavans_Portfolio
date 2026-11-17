@@ -103,9 +103,10 @@
                         <span class="text-cyan-300 font-medium">Building</span> cool things through code
                     </div>
                     <div class="flex flex-wrap justify-center gap-3 text-sm sm:text-base text-gray-400">
-                        <span class="px-3 py-1 rounded-full border border-gray-700 hover:border-cyan-500 hover:text-cyan-300 transition-colors duration-300 cursor-pointer">AI</span>
-                        <span class="px-3 py-1 rounded-full border border-gray-700 hover:border-cyan-500 hover:text-cyan-300 transition-colors duration-300 cursor-pointer">Full Stack Applications</span>
-                        <span class="px-3 py-1 rounded-full border border-gray-700 hover:border-cyan-500 hover:text-cyan-300 transition-colors duration-300 cursor-pointer">Python</span>
+                        <span class="px-3 py-1 rounded-full border border-gray-700 hover:border-cyan-500 hover:text-cyan-300 transition-colors duration-300 cursor-pointer">AI Agents &amp; RAG</span>
+                        <span class="px-3 py-1 rounded-full border border-gray-700 hover:border-cyan-500 hover:text-cyan-300 transition-colors duration-300 cursor-pointer">Java · Spring Boot</span>
+                        <span class="px-3 py-1 rounded-full border border-gray-700 hover:border-cyan-500 hover:text-cyan-300 transition-colors duration-300 cursor-pointer">Python · FastAPI</span>
+                        <span class="px-3 py-1 rounded-full border border-gray-700 hover:border-cyan-500 hover:text-cyan-300 transition-colors duration-300 cursor-pointer">ReactJS</span>
                     </div>
                 </div>
             </div>
@@ -124,7 +125,7 @@
             </div>
             <div class="marquee-row marquee-row--outline" data-direction="1">
                 <div class="marquee-track">
-                    <span>FastAPI</span><span class="marquee-star">✦</span><span>Spring Boot</span><span class="marquee-star">✦</span><span>AWS</span><span class="marquee-star">✦</span><span>LangChain</span><span class="marquee-star">✦</span><span>Kafka</span><span class="marquee-star">✦</span>
+                    <span>FastAPI</span><span class="marquee-star">✦</span><span>Spring Boot</span><span class="marquee-star">✦</span><span>AWS</span><span class="marquee-star">✦</span><span>LangGraph</span><span class="marquee-star">✦</span><span>RAG</span><span class="marquee-star">✦</span><span>Kafka</span><span class="marquee-star">✦</span>
                 </div>
             </div>
         </div>
@@ -161,13 +162,19 @@
                         </p>
 
                         <p class="text-sm sm:text-base md:text-lg leading-relaxed text-gray-300">
-                            Currently, I'm an <span class="font-semibold">Associate Software Engineer</span> at 
-                            <span class="italic font-semibold">TexasAI</span>, working on Artificial Intelligence building incredible things :) I have also interned at <span class="italic">Mipzo Pvt Ltd,</span> <span class="italic">Silo Fortune</span> and 
-                            <span class="italic">Akanksha Charitable Trust</span>, gaining experience in AI and software development.
+                            Currently, I'm a <span class="font-semibold">Software Engineer</span> at
+                            <span class="italic font-semibold">Pratishthan Software Ventures</span>. Before that, I spent over a year and a half as an Associate Software Engineer at
+                            <span class="italic font-semibold">TexasAI</span>, shipping LLM, RAG and search features to production. I have also interned at <span class="italic">Mipzo Pvt Ltd,</span> <span class="italic">Silo Fortune</span> and
+                            <span class="italic">Akanksha Charitable Trust</span>.
                         </p>
 
                         <p class="text-sm sm:text-base md:text-lg leading-relaxed text-gray-300">
-                            I have completed my engineering through MCE in Information Science on 2025. 
+                            I'm an <span class="font-semibold text-cyan-300">AWS Certified Machine Learning Engineer</span> and I build at hackathons often:
+                            a Top 10 finish at <span class="italic">PromptWars</span> and a top 10% finish at Google's <span class="italic">Build with AI</span> bootcamp.
+                        </p>
+
+                        <p class="text-sm sm:text-base md:text-lg leading-relaxed text-gray-300">
+                            I completed my engineering in Information Science at MCE in 2025.
                             I served as the <span class="font-semibold text-cyan-300">Vice President</span> of 
                             <span class="italic font-semibold">The Malnad Technical Club</span> and actively participate in 
                             <span class="italic font-semibold">NSS</span>, fostering teamwork, leadership, and technical excellence. 
@@ -192,6 +199,93 @@
         <section id="projects" class="py-8 sm:py-16">
             <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8 md:mb-12 text-center">My Projects</h2>
             <div id="projects-track" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 px-4">
+
+                <!-- PairMind -->
+                <div class="flip-card h-80 sm:h-80" onclick="location.href='https://pairmind.pavanb.in/'">
+                    <div class="flip-card-inner relative w-full h-full">
+                        <div class="flip-card-front bg-gray-800/50 backdrop-blur-sm rounded-lg overflow-hidden">
+                            <div class="h-32 overflow-hidden">
+                                <img
+                                    src="pairmind.webp"
+                                    alt="PairMind landing page: two agents sit down, open the documents and work out the deal"
+                                    class="project-image w-full h-full object-cover object-left"
+                                />
+                            </div>
+                            <div class="p-4 sm:p-6">
+                                <h3 class="text-lg sm:text-xl font-semibold mb-2 sm:mb-3">PairMind — Agentic Negotiation</h3>
+                                <p class="text-sm sm:text-base text-gray-400 mb-3 sm:mb-4">Two AI agents negotiate a $50,000 B2B deal, each seeing only its own private documents.</p>
+                            </div>
+                        </div>
+                        <div class="flip-card-back p-4 sm:p-6 bg-gray-800/50 backdrop-blur-sm rounded-lg">
+                            <h3 class="text-base sm:text-lg font-semibold mb-2 text-cyan-300">Features:</h3>
+                            <ul class="text-xs sm:text-sm text-gray-300 list-disc list-inside space-y-1">
+                                <li>LangGraph turn-by-turn streaming, Claude Haiku</li>
+                                <li>Hybrid RAG: BM25 + dense vectors + RRF on OpenSearch</li>
+                                <li>Validator rejects any claim without a citation</li>
+                                <li>Always ends: agreement, walk-away, deadlock or timeout</li>
+                                <li>Self-hosted FastAPI on a single EC2 box</li>
+                            </ul>
+                            <div class="mt-4 text-cyan-300 text-xs sm:text-sm">Click to try the live demo →</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Koolix -->
+                <div class="flip-card h-80 sm:h-80" onclick="location.href='https://aistudio.google.com/apps/48d72f4f-63d5-4d87-afde-4757a08c13f4?fullscreenApplet=true'">
+                    <div class="flip-card-inner relative w-full h-full">
+                        <div class="flip-card-front bg-gray-800/50 backdrop-blur-sm rounded-lg overflow-hidden">
+                            <div class="h-32 overflow-hidden">
+                                <img
+                                    src="koolix.webp"
+                                    alt="Koolix travel language app home screen"
+                                    class="project-image w-full h-full object-cover object-top"
+                                />
+                            </div>
+                            <div class="p-4 sm:p-6">
+                                <h3 class="text-lg sm:text-xl font-semibold mb-2 sm:mb-3">Koolix — Travel Language App</h3>
+                                <p class="text-sm sm:text-base text-gray-400 mb-3 sm:mb-4">Built in 40 minutes at Google's Build with AI bootcamp. Rank 17 of 280+.</p>
+                            </div>
+                        </div>
+                        <div class="flip-card-back p-4 sm:p-6 bg-gray-800/50 backdrop-blur-sm rounded-lg">
+                            <h3 class="text-base sm:text-lg font-semibold mb-2 text-cyan-300">Features:</h3>
+                            <ul class="text-xs sm:text-sm text-gray-300 list-disc list-inside space-y-1">
+                                <li>AI roleplay in 6 languages, including Kannada</li>
+                                <li>Saved phrase deck with audio and mastery stages</li>
+                                <li>Quizzes with XP, streaks and a retry drill</li>
+                                <li>Built with Stitch, Antigravity and AI Studio</li>
+                            </ul>
+                            <div class="mt-4 text-cyan-300 text-xs sm:text-sm">Click to try Koolix →</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Varsha Sahayak -->
+                <div class="flip-card h-80 sm:h-80" onclick="location.href='https://github.com/Pawon25/monsoon-app'">
+                    <div class="flip-card-inner relative w-full h-full">
+                        <div class="flip-card-front bg-gray-800/50 backdrop-blur-sm rounded-lg overflow-hidden">
+                            <div class="h-32 overflow-hidden bg-white">
+                                <img
+                                    src="varsha.webp"
+                                    alt="PromptWars AI evaluation score of 97.91 out of 100"
+                                    class="project-image w-full h-full object-cover object-left-top"
+                                />
+                            </div>
+                            <div class="p-4 sm:p-6">
+                                <h3 class="text-lg sm:text-xl font-semibold mb-2 sm:mb-3">Varsha Sahayak</h3>
+                                <p class="text-sm sm:text-base text-gray-400 mb-3 sm:mb-4">GenAI monsoon preparedness assistant, grounded in live weather data. Built solo in one day.</p>
+                            </div>
+                        </div>
+                        <div class="flip-card-back p-4 sm:p-6 bg-gray-800/50 backdrop-blur-sm rounded-lg">
+                            <h3 class="text-base sm:text-lg font-semibold mb-2 text-cyan-300">Features:</h3>
+                            <ul class="text-xs sm:text-sm text-gray-300 list-disc list-inside space-y-1">
+                                <li>FastAPI + Claude Sonnet + OpenWeatherMap</li>
+                                <li>Personalised plans in 8+ languages</li>
+                                <li>Severe weather alerts polled every 15 minutes</li>
+                                <li>Prompt-injection guards, rate limits, 19 tests</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
                 <!-- AgroIntent -->
                 <div class="flip-card h-80 sm:h-80" onclick="location.href='https://pavan-promptwars.web.app/'">
@@ -229,13 +323,13 @@
                             <div class="h-32 overflow-hidden">
                                 <img 
                                     src="npstra.webp" 
-                                    alt="Video Conferencing App Screenshot"
+                                    alt="NeuroSpectra Screenshot"
                                     class="project-image w-full h-full object-cover"
                                 />
                             </div>
                             <div class="p-4 sm:p-6">
                                 <h3 class="text-lg sm:text-xl font-semibold mb-2 sm:mb-3">NeuroSpectra</h3>
-                                <p class="text-sm sm:text-base text-gray-400 mb-3 sm:mb-4">A full stack application for predicting the certainity of a person having autism based on A0 to A10 scores.</p>
+                                <p class="text-sm sm:text-base text-gray-400 mb-3 sm:mb-4">A full stack application that predicts the likelihood of autism from A1 to A10 behavioural scores.</p>
                                 <div class="flex flex-wrap gap-2">
                                     <!-- <span class="inline-block px-2 py-1 text-xs bg-blue-600 rounded-full">UI/UX</span>
                                     <span class="inline-block px-2 py-1 text-xs bg-blue-600 rounded-full">JavaScript</span>
@@ -246,8 +340,8 @@
                         <div class="flip-card-back p-4 sm:p-6 bg-gray-800/50 backdrop-blur-sm rounded-lg">
                             <h3 class="text-base sm:text-lg font-semibold mb-2 text-cyan-300">Features:</h3>
                             <ul class="text-xs sm:text-sm text-gray-300 list-disc list-inside space-y-1">
-                                <li>ASD prediction accuracy 99.98%</li>
-                                <li>SVM vs RF vs LR benchmarking</li>
+                                <li>ASD prediction accuracy 99.9% (SVM)</li>
+                                <li>Benchmarked against Random Forest and Naive Bayes</li>
                                 <li>Backend model inferencing endpoint built with fastAPI</li>
                                 <li>Deployed model artifacts on render</li>
                             </ul>
@@ -261,8 +355,8 @@
                         <div class="flip-card-front bg-gray-800/50 backdrop-blur-sm rounded-lg overflow-hidden">
                             <div class="h-32 overflow-hidden">
                                                 <img 
-                                                    src="Leo-banner.webp" 
-                                                    alt="Video Conferencing App Screenshot"
+                                                    src="Leo-banner.webp"
+                                                    alt="Leo Ride Booking Platform Banner"
                                                     class="project-image w-full h-full object-cover"
                                                 />
                             </div>
@@ -348,40 +442,6 @@
                     </div>
                 </div> -->
 
-                <!-- Handwritten Digit Recognizer -->
-                <div class="flip-card h-80 sm:h-80" onclick="location.href='https://github.com/Pawon25/Hand-Written-Digits-Recognition-Using-ANN'">
-                    <div class="flip-card-inner relative w-full h-full">
-                        <div class="flip-card-front bg-gray-800/50 backdrop-blur-sm rounded-lg overflow-hidden">
-                            <div class="h-32 overflow-hidden">
-                                <img 
-                                    src="hand_written_digit_recogniser.png" 
-                                    alt="Handwritten Digit Recognition Screenshot"
-                                    class="project-image w-full h-full object-cover"
-                                />
-                            </div>
-                            <div class="p-4 sm:p-6">
-                                <h3 class="text-lg sm:text-xl font-semibold mb-2 sm:mb-3">Handwritten Digit Decoder</h3>
-                                <p class="text-sm sm:text-base text-gray-400 mb-3 sm:mb-4">TensorFlow-based model for handwritten digit recognition with 98% accuracy</p>
-                                <div class="flex flex-wrap gap-2">
-                                    <!-- <span class="inline-block px-2 py-1 text-xs bg-blue-600 rounded-full">ANN</span>
-                                    <span class="inline-block px-2 py-1 text-xs bg-blue-600 rounded-full">Python</span>
-                                    <span class="inline-block px-2 py-1 text-xs bg-blue-600 rounded-full">TensorFlow</span> -->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flip-card-back p-4 sm:p-6 bg-gray-800/50 backdrop-blur-sm rounded-lg">
-                            <h3 class="text-base sm:text-lg font-semibold mb-2 text-cyan-300">Technical Details:</h3>
-                            <ul class="text-xs sm:text-sm text-gray-300 list-disc list-inside space-y-1">
-                                <li>ANN architecture with TensorFlow</li>
-                                <li>98% accuracy on MNIST dataset</li>
-                                <li>Real-time prediction capability</li>
-                                <li>Custom preprocessing pipeline</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-
                 <!-- View All Projects Card -->
                 <div class="flip-card h-80 sm:h-80" onclick="location.href='https://github.com/Pawon25'">
                     <div class="flip-card-inner relative w-full h-full">
@@ -411,6 +471,76 @@
             </div>
         </section>
 
+        <!-- Hackathons & Highlights -->
+        <section id="highlights" class="py-8 sm:py-16 px-4">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8 md:mb-12 text-center">Hackathons &amp; Highlights</h2>
+            <div class="max-w-5xl mx-auto space-y-4 sm:space-y-6 md:space-y-8">
+
+                <!-- Build with AI @ Google Ananta -->
+                <div class="group relative p-3 sm:p-4 md:p-6">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-blue-400/20 via-red-400/20 to-yellow-300/20 rounded-lg blur-xl opacity-25 group-hover:opacity-75 transition duration-1000"></div>
+                    <div class="relative p-4 sm:p-6 bg-gray-800/50 backdrop-blur-sm rounded-lg border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300">
+                        <div class="flex flex-col md:flex-row md:items-center gap-2 mb-2 sm:mb-3 text-center md:text-left">
+                            <h3 class="text-xl sm:text-2xl font-bold text-cyan-300">Build with AI Bootcamp — Google Ananta</h3>
+                            <span class="md:ml-auto text-sm text-gray-400 bg-gray-800/50 px-3 py-1 rounded-full self-center md:self-auto">Nov 2026</span>
+                        </div>
+                        <p class="text-base sm:text-lg font-semibold text-gray-300 mb-2 text-center md:text-left">Top 10% · Rank 17 of 280+ · 10/12 points</p>
+                        <p class="text-gray-400 text-center md:text-left">
+                            Founder Mode challenge: one product brief and two 20-minute rounds. I built Koolix, a travel language app, with Stitch, Google Antigravity and Google AI Studio.
+                            <a href="https://medium.com/@pavanbasavaraj25/the-model-is-not-the-product-the-harness-is-76252a0ec1a3" target="_blank" rel="noopener noreferrer" class="text-cyan-300 hover:underline whitespace-nowrap">Read the story on Medium →</a>
+                        </p>
+                        <div class="highlight-gallery mt-5">
+                            <img src="ananta/ananta-google-sign.webp" alt="Pavan at the Google sign in the Ananta campus lobby" loading="lazy" class="highlight-tall" />
+                            <img src="ananta/ananta-think.webp" alt="Build with AI keynote stage showing the Think step" loading="lazy" />
+                            <img src="ananta/ananta-gemini.webp" alt="Keynote slide introducing the Gemini 4 model family" loading="lazy" />
+                            <img src="ananta/ananta-rank.webp" alt="Final standing screen: Rank 17, 10 of 12 points" loading="lazy" class="highlight-tall" />
+                            <img src="ananta/ananta-campus.webp" alt="Google Ananta campus building in Bengaluru" loading="lazy" class="highlight-tall" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PromptWars -->
+                <div class="group relative p-3 sm:p-4 md:p-6">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-violet-400/20 via-fuchsia-400/20 to-cyan-300/20 rounded-lg blur-xl opacity-25 group-hover:opacity-75 transition duration-1000"></div>
+                    <div class="relative p-4 sm:p-6 bg-gray-800/50 backdrop-blur-sm rounded-lg border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 text-center md:text-left">
+                        <div class="flex flex-col md:flex-row md:items-center gap-2 mb-2 sm:mb-3">
+                            <h3 class="text-xl sm:text-2xl font-bold text-cyan-300">PromptWars — Top 10 Finalist</h3>
+                            <span class="md:ml-auto text-sm text-gray-400 bg-gray-800/50 px-3 py-1 rounded-full self-center md:self-auto">Google for Developers × Hack2skill</span>
+                        </div>
+                        <p class="text-base sm:text-lg font-semibold text-gray-300 mb-2">Top 5 by evaluation · 97.91/100 · "The Comeback" badge</p>
+                        <p class="text-gray-400">Built Varsha Sahayak solo in one day. The first submission scored about 11/100 because of a broken deploy config; after fixing it, the resubmission scored 97.91. Earlier, AgroIntent was built at Google's office for the same series.</p>
+                        <div class="highlight-gallery mt-5">
+                            <img src="promptwars/pw-top10.webp" alt="Pavan in front of the PromptWars Top 10 board" loading="lazy" />
+                            <img src="promptwars/pw-score.webp" alt="AI evaluation score of 97.91 out of 100" loading="lazy" class="object-left-top" />
+                            <img src="promptwars/pw-swag.webp" alt="PromptWars Top 10, Comeback and Prompt Engineer badges" loading="lazy" />
+                            <img src="promptwars/pw-google.webp" alt="Pavan and a fellow participant at the Google office" loading="lazy" />
+                            <img src="promptwars/pw-google-cloud.webp" alt="At the Google Cloud wall during PromptWars" loading="lazy" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AWS Innovators Summit -->
+                <div class="group relative p-3 sm:p-4 md:p-6">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-orange-400/20 via-fuchsia-400/20 to-violet-400/20 rounded-lg blur-xl opacity-25 group-hover:opacity-75 transition duration-1000"></div>
+                    <div class="relative p-4 sm:p-6 bg-gray-800/50 backdrop-blur-sm rounded-lg border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 text-center md:text-left">
+                        <div class="flex flex-col md:flex-row md:items-center gap-2 mb-2 sm:mb-3">
+                            <h3 class="text-xl sm:text-2xl font-bold text-cyan-300">AWS Innovators Summit — Bengaluru</h3>
+                            <span class="md:ml-auto text-sm text-gray-400 bg-gray-800/50 px-3 py-1 rounded-full self-center md:self-auto">Amazon Web Services</span>
+                        </div>
+                        <p class="text-base sm:text-lg font-semibold text-gray-300 mb-2">Built a multi-agent system with Bedrock AgentCore</p>
+                        <p class="text-gray-400">Hands-on day building agents with Lambda tool calling, agent memory and live web search, plus sessions on agent guardrails, Trainium and SageMaker HyperPod.</p>
+                        <div class="highlight-gallery mt-5">
+                            <img src="aws-summit/aws-pavan.webp" alt="Pavan at AWS Summit Bengaluru" loading="lazy" />
+                            <img src="aws-summit/aws-stage.webp" alt="AWS Summit Bengaluru main stage" loading="lazy" />
+                            <img src="aws-summit/aws-agentcore.webp" alt="Session slide on policies in Bedrock AgentCore" loading="lazy" />
+                            <img src="aws-summit/aws-gameday.webp" alt="AWS GameDay spec-driven development session" loading="lazy" />
+                            <img src="aws-summit/aws-badge.webp" alt="AWS Summit attendee badge" loading="lazy" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Skills Matrix -->
         <section class="py-8 sm:py-16 mt-8">
             <h2 class="text-3xl sm:text-4xl font-bold mb-6 sm:mb-8 text-center">Skills Matrix</h2>
@@ -423,6 +553,28 @@
         <section class="py-8 sm:py-16 px-4">
             <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8 md:mb-12 text-center">Experience Timeline</h2>
             <div class="max-w-5xl mx-auto space-y-4 sm:space-y-6 md:space-y-8">
+
+                <!-- Pratishthan Software Ventures Experience -->
+                <div class="group relative p-3 sm:p-4 md:p-6">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-violet-400/20 via-fuchsia-400/20 to-cyan-300/20 rounded-lg blur-xl opacity-25 group-hover:opacity-75 transition duration-1000"></div>
+                    <div class="relative p-4 sm:p-6 bg-gray-800/50 backdrop-blur-sm rounded-lg border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 flex flex-col md:flex-row gap-4 sm:gap-6 items-center">
+                        <div class="shrink-0">
+                            <div class="block w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-br from-violet-400 to-fuchsia-400 p-1">
+                                <div class="w-full h-full rounded-full bg-gray-900 flex items-center justify-center overflow-hidden">
+                                    <img src="psv-mark.svg" alt="Pratishthan Software Ventures Logo" class="w-3/4 h-3/4 object-contain">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-1 text-center md:text-left">
+                            <div class="flex flex-col md:flex-row md:items-center gap-2 mb-2 sm:mb-3">
+                                <h3 class="text-xl sm:text-2xl font-bold text-cyan-300">Pratishthan Software Ventures</h3>
+                                <span class="md:ml-auto text-sm text-gray-400 bg-gray-800/50 px-3 py-1 rounded-full">Nov 2026 - Present</span>
+                            </div>
+                            <p class="text-base sm:text-lg font-semibold text-gray-300 mb-2">Software Engineer</p>
+                            <p class="text-gray-400">Software Engineer in Bengaluru, working across Java, Spring Boot, Python and ReactJS.</p>
+                        </div>
+                    </div>
+                </div>
 
                 <!-- TexasAI Experience -->
                 <div class="group relative p-3 sm:p-4 md:p-6">
@@ -439,10 +591,15 @@
                         <div class="flex-1 text-center md:text-left">
                             <div class="flex flex-col md:flex-row md:items-center gap-2 mb-2 sm:mb-3">
                                 <h3 class="text-xl sm:text-2xl font-bold text-cyan-300">TexasAI</h3>
-                                <span class="md:ml-auto text-sm text-gray-400 bg-gray-800/50 px-3 py-1 rounded-full">Mar 2025 - Present</span>
+                                <span class="md:ml-auto text-sm text-gray-400 bg-gray-800/50 px-3 py-1 rounded-full">Mar 2025 - Oct 2026</span>
                             </div>
                             <p class="text-base sm:text-lg font-semibold text-gray-300 mb-2">Associate Software Engineer</p>
-                            <p class="text-gray-400">Working on development of backend systems with FastAPI. Integrating AI models to provide real-time solutions.</p>
+                            <ul class="text-gray-400 space-y-1 text-left list-disc list-inside">
+                                <li>Built AI features for a CJIS-compliant investigation platform (Spring Boot): OpenSearch for large-scale search, AWS Transcribe for media evidence, and LLMs on llama.cpp for case summaries and chat.</li>
+                                <li>Architected Griffin Recruit, a multi-tenant ATS for US staffing firms, with AI candidate matching (cosine similarity, Llama 3.2 via Ollama).</li>
+                                <li>Built role-based ReactJS dashboards and FastAPI + MongoDB APIs that cut page load times by 40%.</li>
+                                <li>Deployed and ran the platform on AWS EC2 and S3.</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -562,6 +719,28 @@
                             </div>
                         </div>
                     </div>
+                                    <!-- MongoDB Cert -->
+                                    <div class="group relative p-3 sm:p-4 md:p-6">
+                                        <div class="absolute -inset-1 bg-gradient-to-r from-green-400/20 via-emerald-400/20 to-cyan-300/20 rounded-lg blur-xl opacity-25 group-hover:opacity-75 transition duration-1000"></div>
+                                        <div class="relative p-4 sm:p-6 bg-gray-800/50 backdrop-blur-sm rounded-lg border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 flex flex-col md:flex-row gap-6 items-center">
+                                            <div class="shrink-0 flex items-center justify-center" style="width:125px;">
+                                                <img src="mongodb.svg" alt="MongoDB Logo" class="w-20 h-20 object-contain" />
+                                            </div>
+                                            <div class="flex-1 text-center md:text-left">
+                                                <div class="flex flex-col md:flex-row md:items-center gap-2 mb-2 sm:mb-3">
+                                                    <h3 class="text-xl sm:text-2xl font-bold text-cyan-300">Monitoring MongoDB with Built-in Tools</h3>
+                                                    <span class="md:ml-auto text-sm text-gray-400 bg-gray-800/50 px-3 py-1 rounded-full">Apr 2026</span>
+                                                </div>
+                                                <p class="text-base sm:text-lg font-semibold text-gray-300 mb-2">MongoDB</p>
+                                                <p class="text-gray-400">Monitoring deployments, early warning signals and query optimisation with MongoDB's built-in tooling.</p>
+                                                <div class="mt-3 flex flex-wrap justify-center md:justify-start gap-2">
+                                                    <span class="px-2 py-1 text-xs rounded-full bg-green-500/10 border border-green-500/30 text-green-300">Monitoring</span>
+                                                    <span class="px-2 py-1 text-xs rounded-full bg-green-500/10 border border-green-500/30 text-green-300">Query Optimisation</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                     <!-- Hugging Face LLM Course Cert -->
                                     <div class="group relative p-3 sm:p-4 md:p-6">
                                         <div class="absolute -inset-1 bg-gradient-to-r from-yellow-400/20 via-orange-400/20 to-fuchsia-400/20 rounded-lg blur-xl opacity-25 group-hover:opacity-75 transition duration-1000"></div>

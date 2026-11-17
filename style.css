@@ -248,3 +248,31 @@ body {
     width: calc(100% + 24px) !important;
     height: calc(100% + 16px) !important;
 }
+/* Hackathon photo gallery */
+.highlight-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.5rem;
+}
+.highlight-gallery img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(55, 65, 81, 0.6);
+}
+.highlight-gallery img:first-child {
+    grid-column: span 2;
+    height: 260px;
+    object-position: center 30%;
+}
+@media (min-width: 768px) {
+    .highlight-gallery {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+    .highlight-gallery img,
+    .highlight-gallery img:first-child {
+        grid-column: auto;
+        height: 220px;
+    }
+}
