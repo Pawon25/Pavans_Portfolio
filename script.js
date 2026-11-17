@@ -27,11 +27,28 @@
             }
         }
 
-        // Images and the Credly badge change the page height after load; re-measure so scroll math stays right
-        window.addEventListener('load', () => {
-            if (lenis) lenis.resize();
-            if (hasGsap) ScrollTrigger.refresh();
-        });
+        // Images and the Credly badge iframe change the page height at unpredictable times (including after
+        // the load event); re-measure whenever the height actually changes so trigger positions stay right
+        if (hasGsap && 'ResizeObserver' in window) {
+            let lastHeight = document.body.offsetHeight;
+            let refreshTimer = null;
+            new ResizeObserver(() => {
+                const height = document.body.offsetHeight;
+                if (height === lastHeight) return;
+                lastHeight = height;
+                clearTimeout(refreshTimer);
+                refreshTimer = setTimeout(() => {
+                    if (lenis) lenis.resize();
+                    ScrollTrigger.refresh();
+                    lastHeight = document.body.offsetHeight; // ignore the height change the refresh itself causes
+                }, 200);
+            }).observe(document.body);
+        } else {
+            window.addEventListener('load', () => {
+                if (lenis) lenis.resize();
+                if (hasGsap) ScrollTrigger.refresh();
+            });
+        }
 
         // Scroll-to-top button: show after scrolling down, scroll smoothly on click
         const scrollTopBtn = document.getElementById('scroll-top');
@@ -284,19 +301,26 @@
                 };
                 gsap.ticker.add(tickMarquee);
 
-                // Section headings: letters rise into place
+                // Section headings: letters rise into place.
+                // Letters are grouped per word in a nowrap wrapper so lines only break between words.
                 gsap.utils.toArray('main h2:not(.bg-clip-text)').forEach((h2) => {
                     const label = h2.textContent.trim();
                     h2.setAttribute('aria-label', label);
                     h2.textContent = '';
-                    label.split('').forEach((c) => {
-                        const span = document.createElement('span');
-                        span.className = 'split-char';
-                        span.setAttribute('aria-hidden', 'true');
-                        span.textContent = c === ' ' ? ' ' : c;
-                        h2.appendChild(span);
+                    label.split(/\s+/).forEach((word, i) => {
+                        if (i > 0) h2.appendChild(document.createTextNode(' '));
+                        const wordEl = document.createElement('span');
+                        wordEl.className = 'split-word';
+                        wordEl.setAttribute('aria-hidden', 'true');
+                        word.split('').forEach((c) => {
+                            const span = document.createElement('span');
+                            span.className = 'split-char';
+                            span.textContent = c;
+                            wordEl.appendChild(span);
+                        });
+                        h2.appendChild(wordEl);
                     });
-                    gsap.from(h2.children, {
+                    gsap.from(h2.querySelectorAll('.split-char'), {
                         yPercent: 120,
                         rotate: 8,
                         opacity: 0,

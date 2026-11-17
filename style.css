@@ -203,7 +203,11 @@ body {
     color: #67e8f9;
 }
 
-/* Section headings split into letters for the reveal */
+/* Section headings split into letters for the reveal; words never break internally */
+.split-word {
+    display: inline-block;
+    white-space: nowrap;
+}
 .split-char {
     display: inline-block;
     will-change: transform;
