@@ -132,6 +132,115 @@ button:hover ~ #cursor-tracker .cursor-outline,
     }
 }
 
+/* ---------- Scroll experience ---------- */
+body {
+    overflow-x: clip; /* full-bleed sections without a horizontal scrollbar */
+}
+
+.scroll-hint-line {
+    width: 1px;
+    height: 48px;
+    background: linear-gradient(to bottom, rgba(103, 232, 249, 0.8), transparent);
+    animation: scroll-hint 2s ease-in-out infinite;
+    transform-origin: top;
+}
+@keyframes scroll-hint {
+    0%   { transform: scaleY(0); opacity: 1; }
+    60%  { transform: scaleY(1); opacity: 1; }
+    100% { transform: scaleY(1); opacity: 0; }
+}
+
+/* Velocity marquee: full-bleed band that breaks out of the centered container */
+.marquee-band {
+    position: relative;
+    left: 50%;
+    width: 100vw;
+    margin-left: -50vw;
+    padding: 2.5rem 0;
+    overflow: hidden;
+    border-block: 1px solid rgba(55, 65, 81, 0.6);
+}
+.marquee-row {
+    display: flex;
+    white-space: nowrap;
+    will-change: transform;
+}
+.marquee-track {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    gap: 2rem;
+    padding-right: 2rem;
+    font-size: clamp(2.5rem, 8vw, 7rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+}
+.marquee-row--outline .marquee-track {
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(103, 232, 249, 0.55);
+}
+.marquee-star {
+    font-size: 0.5em;
+    color: #e879f9;
+}
+.marquee-row--outline .marquee-star {
+    -webkit-text-stroke: 0;
+    color: #67e8f9;
+}
+
+/* Statement: words light up as you scroll past */
+.statement-text .word {
+    display: inline-block;
+    color: rgba(156, 163, 175, 0.18);
+    transition: color 0.2s linear;
+}
+.statement-text .word.is-lit {
+    color: #f3f4f6;
+}
+.statement-text .word.is-accent.is-lit {
+    color: #67e8f9;
+}
+
+/* Section headings split into letters for the reveal; words never break internally */
+.split-word {
+    display: inline-block;
+    white-space: nowrap;
+}
+.split-char {
+    display: inline-block;
+    will-change: transform;
+}
+
+/* Desktop: projects become a pinned horizontal gallery (class added by JS) */
+@media (min-width: 1024px) {
+    #projects.is-horizontal {
+        position: relative;
+        left: 50%;
+        width: 100vw;
+        margin-left: -50vw;
+        overflow: hidden;
+    }
+    #projects.is-horizontal {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #projects.is-horizontal #projects-track {
+        display: flex;
+        gap: 2rem;
+        width: max-content;
+        padding: 0 8vw;
+        will-change: transform;
+    }
+    #projects.is-horizontal .flip-card {
+        width: 380px;
+        flex-shrink: 0;
+    }
+}
+
 /* Credly iframe border fix */
 .credly-badge-wrapper iframe {
     border: none !important;
